@@ -2,6 +2,10 @@
 
 // 依赖 global, util
 
+var global = require('./global');  // 头部声明依赖
+var util = require('./util');  // 头部声明依赖
+
+
 var ctx1 = global.ctx1;
 var imgUrl = global.imgUrl;
 var canWid = global.canWid;
@@ -95,3 +99,6 @@ Mom.prototype.drawMom = function(){
   ctx1.drawImage(momEyeImage, -momEyeImage.width * 0.5, -momEyeImage.height * 0.5);
   ctx1.restore();   //操作完后返回到之前的画布
 }
+
+
+module.exports = Mom;

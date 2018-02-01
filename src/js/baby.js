@@ -2,6 +2,9 @@
 
 // 依赖 global, util
 
+var global = require('./global');  // 头部声明依赖
+var util = require('./util');
+
 var imgUrl = global.imgUrl;
 var ctx1 = global.ctx1;
 var can1 = global.can1;
@@ -105,3 +108,6 @@ Baby.prototype.drawBaby = function(){
 
   ctx1.restore();   //操作完后返回到之前的画布
 }
+
+
+module.exports = Baby;

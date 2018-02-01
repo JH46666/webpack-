@@ -2,6 +2,9 @@
 
 // 依赖 global
 
+
+var global = require('./global');  // 头部声明依赖
+
 var ctx2 = global.ctx2;
 var canHei = global.canHei;
 
@@ -41,3 +44,5 @@ Ane.prototype.drawAne = function(){
   }
   ctx2.restore();
 }
+
+module.exports = Ane ;

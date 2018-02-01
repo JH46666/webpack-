@@ -2,6 +2,19 @@
 
 // 依赖 global, util, ane, baby, dust, fruit, halo, mom, score, wave
 
+
+var global = require('./global');  // 头部声明依赖
+var util = require('./util');
+var Ane = require('./ane');
+var Baby = require('./baby');
+var Dust = require('./dust');
+var Fruit = require('./fruit');
+var Halo = require('./halo');
+var Mom = require('./mom');
+var Score = require('./score');
+var Wave = require('./wave');
+
+
 var aneOb;
 var fruitOb;
 var momOb;
@@ -154,3 +167,5 @@ Controller.momFoodBaby = function(){    //判断大鱼和小鱼之间的距离�
   }
 }
 
+
+module.exports = Controller;

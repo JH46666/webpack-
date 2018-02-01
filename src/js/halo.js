@@ -2,6 +2,8 @@
 
 // 依赖 global
 
+var global = require('./global');  // 头部声明依赖
+
 var ctx1 = global.ctx1;
 var canWid = global.canWid;
 var canHei = global.canHei;
@@ -53,3 +55,5 @@ Halo.prototype.born = function(){
     }
   }
 }
+
+module.exports = Halo;

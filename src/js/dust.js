@@ -2,6 +2,8 @@
 
 // 依赖 global
 
+var global = require('./global');  // 头部声明依赖
+
 var ctx1 = global.ctx1;
 var imgUrl = global.imgUrl;
 var canWid = global.canWid;
@@ -36,3 +38,5 @@ Dust.prototype.drawDust = function(){
     ctx1.drawImage(this.dustPic[index], this.x, this.y);
   }
 }
+
+module.exports = Dust; //最后暴露 Dust 类
