@@ -26,6 +26,13 @@ module.exports = {
         }]
     },
     plugins:[
+        //清除build后的文件
+        new CleanWebpackPlugin(['dist'],{
+           "root":__dirname,//一个根的绝对路径.
+            "verbose": true,//将log写到 console.
+            "dry": false,//不要删除任何东西，主要用于测试.
+            "exclude": ["files","to","ignore"]//排除不删除的目录，主要用于避免删除公用的文件
+        }),
         //压缩代码
         new UglifyJsPlugin(),
         // CSS 文件分离出来，构建后目录单独有一个 style.css 文件
@@ -42,13 +49,6 @@ module.exports = {
             from: __dirname + '/src/images',
             to: './images',
         }]),
-        //清除build后的文件
-        new CleanWebpackPlugin(['dist'],{
-           "root":__dirname,//一个根的绝对路径.
-            "verbose": true,//将log写到 console.
-            "dry": false,//不要删除任何东西，主要用于测试.
-            "exclude": ["files","to","ignore"]//排除不删除的目录，主要用于避免删除公用的文件
-        }),
-
+      
     ]
 }
